@@ -19,11 +19,12 @@ users = {
     }
 }
 
-#########################################################################################
+
+#---------------------------------------------------------------#
 point = 0
 
 form_jawaban_benar = ("Jawaban Benar, Kamu mendapatkan 20 Point")
-#########################################################################################
+#---------------------------------------------------------------#
 
 # DI BAWAH INI ADALAH SOAL UNTUK MAPEL REKAYASA PERANGKAT LUNAK 
 # V.3 
@@ -176,9 +177,7 @@ def perkumpulan_soal_rpl():
     soal4_rpl()
     soal5_rpl()
 
-##########################################################################################
-
-##########################################################################################
+#------------------------------------------------------------------------#
 
 # DI BAWAH INI ADALAH SOAL UNTUK MATA PELAJARAN TEKNIK KOMPUTER JARINGAN
 # V.3
@@ -332,9 +331,7 @@ def perkumpulan_soal_tkj():
     soal4_tkj()
     soal5_tkj()
 
-#########################################################################################
-
-#########################################################################################
+#---------------------------------------------------------------#
 
 # DI BAWAH INI ADALAH SOAL UNTUK MAPEL MULTIMEDIA
 # V.3
@@ -489,7 +486,7 @@ def perkumpulan_soal_mm():
     soal4_mm()
     soal5_mm()
 
-##########################################################################################
+#---------------------------------------------------------------#
 
 def kumpulan_soal_tkj():
     perkumpulan_soal_tkj()
@@ -525,7 +522,7 @@ def total_point():
     else:
         print("Anda Tidak Lulus")
 
-
+#---------------------------------------------------------------#
 def loginauth(username, password):
     if username in users:
         if password == users[username]["password"]:
@@ -575,6 +572,23 @@ def daftar():
     time.sleep(1)
     print("akun sukses dibuat,login menggunakan yg dibuat tadi yaaa")
 
+def list_kkm():
+    print('++++++++++++++++++++++++++++')
+    print("+ Nama Mapel   |    KKM    +")
+    print('++++++++++++++++++++++++++++')
+    print("+ Produktif RPL|   (80)    +")
+    print("+ Matematika   |   (75)    +")
+    print('+ PKN          |   (75)    +')
+    print('++++++++++++++++++++++++++++')
+
+def list_guru():
+    print("+++++++++++++++++++++++++++++++++++++++")
+    print('+ Nama Guru   |   Mata Pelajaran      +')
+    print('+++++++++++++++++++++++++++++++++++++++')
+    print("+pak rizki    |  (Produktif RPL)      +")
+    print('+pak siswanto |  (Produktif Pemodelan)+')
+    print('+++++++++++++++++++++++++++++++++++++++')
+
 def daftar_mapel():
     time.sleep(1)
     print ("-"*31)
@@ -595,31 +609,37 @@ def daftar_mapel():
 
 def session(username):
     time.sleep(1)
-    print ("-"*31)
-    print("Welcome to system learning " + username)
-    print("Options: [1.]Daftar Mapel | [2.]list guru | [q.]Quit")
+    print(" ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+    print(" +                      ~Welcome to System Learning~                    +")
+    print(" +Options: [1.]Daftar Mapel | [2.]list guru | [3.]list kkm | [q.]Logout +")
+    print(' ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
     while True:
-        input_user = input(username + " > ")
+        input_user = input(username + " => ")
         if input_user == "1":
             daftar_mapel()
 
+        elif input_user == "2":
+            list_guru()
+
+        elif input_user == "3":
+            list_kkm()
+
         elif input_user == "q":
-            exit()
+            exit()            
 
         else:
             print(input_user + "\nyg bener inputnya yaaaa")
-            
+ #---------------------------------------------------------------#           
 def menu():
     print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-    print("+              Welcome to the system learning            +")
+    print("+             ~Welcome To The System Learning~           +")
     print("+              ~sebelum login daftar dlu ya~             +")
     print("+       Options: [1.].LOGIN | [2.].DAFTAR | [9].EXIT     +")
     print("+                https://www.gataungoding.id/            +")
-    print("+                       Version 3.0                      +")
+    print("+                       Version 3.5                      +")
     print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
     start = 0
- 
 
     while start != 10:
 
